@@ -73,9 +73,17 @@ function render() {
 })
 }
 
+//Event Listeners
+function addClick() {
+	const mod = document.getElementById('modal_box');
+	mod.style.zIndex = 10;
+	mod.style.display = "flex";
+}
 
-
-//each book card template
+function closeBox() {
+	const mod = document.getElementById('modal_box');
+	mod.style.display = "none";
+}
 
 
 

@@ -36,10 +36,6 @@ body {
 	font-weight: bold;
 }
 
-
-
-
-
 nav {
 	position: fixed;
 	z-index: 10;
@@ -71,7 +67,7 @@ nav i {
 	font-size: 30px;
 }
 
-button {
+nav button {
 	position: relative;
 	background-color: #2F2B20;
 	border: none;
@@ -80,7 +76,7 @@ button {
 	width: 40px;
 }
 
-button img {
+nav button img {
 	height: 40px;
 	width: auto;
 }
@@ -162,9 +158,47 @@ button img:hover {
 	text-align: center;
 }
 
+#modal_box {
+	display: none;
+	flex-direction: column;
+	height: 400px;
+	width: 400px;
+	background-color: #F6DEC4;
+	border: 1px solid gray;
+	font-weight: bold;
+}
 
+#modal_box form {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+	align-items: center;
+	line-height: 20px
+}
 
+.input-wrapper {
+	display: flex;
+	flex-direction: column;
+	margin: 20px;
+	width: 350px;
+}
 
+#check {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+}
+
+#modal_box img {
+	height: 50px;
+	width: 50px;
+}
+
+#modal_box button {
+	background-color: #F6DEC4;
+	border: none;
+}
 
 
 
