@@ -1,8 +1,6 @@
 let lib = [];
 
 
-
-
 //constructor for new book
 function Book(title, author, numPages, read) {
 	this.title = title,
@@ -11,32 +9,38 @@ function Book(title, author, numPages, read) {
 	this.read = read
 }
 
-
-
-
 //adds book to lib and displays on page
-function addBook(title, author, pages, read) {
+function addBook() {
+	let newTitle = document.querySelector("#title").value;
+	let newAuthor = document.querySelector("#author").value;
+	let newPages = document.querySelector("#pages").value;
 	
-	//1. take user input and store in lib
-	lib.push(new Book(title, author, pages, read));
+//Task 2. this needs to test if check box is checked and set classread status appropriately 
+	let newRead = document.querySelector("#read").value;
+	
+	lib.push(new Book(newTitle, newAuthor, newPages, newRead));
+		
+	closeBox();
 	render();
 }
 
-function render() {
-	
+
+
+function render() {	
 	//remove all children of parent node wrapper
 	const wrapper = document.querySelector('.lib-wrapper');
 	const wrapperLength = wrapper.children.length;
-	
-	for (let i = wrapperLength - 1; i >=0; i--) {
+		for (let i = wrapperLength - 1; i >=0; i--) {
 		wrapper.removeChild(wrapper.children[i]);
 	}
 	
 
 	//renders each book to DOM
-	lib.forEach((book) => {
+	lib.forEach((book, index) => {
+
 	const item = document.createElement('p');
 	item.classList.add('card-wrapper');
+	item.setAttribute('ind', index);
 
 	const bookTitle = document.createElement('h1');
 	bookTitle.classList.add('card-title');
@@ -68,26 +72,23 @@ function render() {
 	item.appendChild(bookAuthor);
 	item.appendChild(bookPages);
 	item.appendChild(bookButton);
-	bookButton.appendChild(bookRead);
-	
-})
+	bookButton.appendChild(bookRead);	
+ })
 }
 
-//Event Listeners
+//DOM Event Functions
 function addClick() {
-	const mod = document.getElementById('modal_box');
-	mod.style.zIndex = 10;
+	const mod = document.querySelector('.modal_box');
 	mod.style.display = "flex";
 }
 
 function closeBox() {
-	const mod = document.getElementById('modal_box');
+	const mod = document.querySelector('.modal_box');
 	mod.style.display = "none";
 }
 
-
-
-
+// Task 1. Create a remove button
+// Task 3.  Use number from index class on each book item and remove it from the DOM and library list
 
 
 ex1 = new Book("Astrophysics for People in a Hurry", "Neil DeGrasse Tyson", 208, true);

@@ -81,7 +81,7 @@ nav button img {
 	width: auto;
 }
 
-button img:hover {
+#addBtn img:hover {
 	border-radius: 25px;
 	background-color: white;
 }
@@ -158,17 +158,19 @@ button img:hover {
 	text-align: center;
 }
 
-#modal_box {
+.modal_box {
 	display: none;
+	position: fixed;
 	flex-direction: column;
 	height: 400px;
 	width: 400px;
 	background-color: #F6DEC4;
 	border: 1px solid gray;
 	font-weight: bold;
+	z-index: 10;
 }
 
-#modal_box form {
+.modal_box form {
 	position: relative;
 	display: flex;
 	flex-direction: column;
@@ -180,25 +182,66 @@ button img:hover {
 .input-wrapper {
 	display: flex;
 	flex-direction: column;
-	margin: 20px;
+	margin: 12px;
 	width: 350px;
+	font-size: 18px;
 }
 
 #check {
 	position: relative;
 	display: flex;
 	flex-direction: row;
+	box-shadow: 1px 1px 1px #2F2B20;
 }
 
-#modal_box img {
+.modal_box img {
 	height: 50px;
 	width: 50px;
 }
 
-#modal_box button {
+.modal_box button {
 	background-color: #F6DEC4;
 	border: none;
 }
 
+#add-book img:hover {	
+	border-radius: 25px;
+	background-color: black;
+}
 
+#close-box img:hover {
+	border-radius: 25px;
+	background-color: maroon;
+}
 
+#btn-wrapper {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	margin: 0px;
+}
+
+.modal_box h3 {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 0px;
+	margin-top: 10px;
+	font-size: 20px;
+	box-shadow: 0px 1px 1px #2F2B20;
+}
+
+#read {
+	text-align: center;
+}
+
+.modal_box input {
+	box-shadow: 1px 1px 1px #2F2B20;
+	margin: 5px;
+	padding: 3px;
+}
+
+.modal_box input:hover {
+	border: 2px solid forestgreen;
+}
