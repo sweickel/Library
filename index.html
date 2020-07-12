@@ -2,7 +2,7 @@
 	<link rel="stylesheet" type="text/css" href="styles/style.css">
 	<script type="text/javascript" src="scripts/script.js"></script>
 	<title></title></head>
-<body>
+<body onload="resetForm(), render()">
 	<nav>		
 		<p>MY <i> eBOOKSHELF </i> LIBRARY</p>
 		<button id="addBtn" onclick="addClick()"><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn1.iconfinder.com%2Fdata%2Ficons%2Fui-colored-1%2F100%2FUI__2-512.png&f=1&nofb=1" alt="addbutton"></button>
@@ -10,7 +10,7 @@
 	
 	<div class="modal_box">
 		<h3>Add New Book</h3>
-		<form>
+		<form class="inputForm">
 			<div class="input-wrapper">
 				<label for="title" class="label">Title:</label>
 				<input type="text" name="title" id="title" placeholder="Enter Title here" required>
@@ -27,8 +27,8 @@
 			</div>
 
 			<div class="input-wrapper" >
-				<label for="read" id="read">Read</label>
-				<input id="check" type="checkbox" name="read" required>
+				<label for="read">Read</label>
+				<input id="read" type="checkbox" name="read" value="read" required unchecked>
 			</div>
 
 

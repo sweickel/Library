@@ -93,7 +93,7 @@ nav button img {
 	align-content: center;
 	width: 80px;
 	height: 50px;
-	bottom: 5px;
+	bottom: 10px;	
 }
 
 .read {
@@ -244,4 +244,28 @@ nav button img {
 
 .modal_box input:hover {
 	border: 2px solid forestgreen;
+}
+
+.card-remove {
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	left: 147px;
+	top: 247px;
+	border-radius: 25px; 
+	background-color: #88911A;
+}
+
+.card-remove:hover {
+	border-radius: 45px;
+	background-color: #88911A;
+	box-shadow: 1px 1px 2px 1px black;
+}
+
+.card-footer {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
 }
