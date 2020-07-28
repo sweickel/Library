@@ -137,7 +137,7 @@
 		}
 
 	function error() {
-		alert('Please fill in all fields to add a book');
+		alert('Please fill in all fields to add a book.');
 	}
 
 ex1 = new Book("Astrophysics for People in a Hurry", "Neil DeGrasse Tyson", 208, true);
@@ -145,21 +145,7 @@ ex1 = new Book("Astrophysics for People in a Hurry", "Neil DeGrasse Tyson", 208,
 		ex3 = new Book("Head First JavaScript", "Michael Morrison", 598, false);
 		lib.push(ex1,ex2,ex3);
 
-function listeners() {
-	domId(add).addEventListener('click', (event) => {
-		addClick();
-	});
 
-	domId(close).addEventListener('click', (event) => {
-		closeBox();
-	});
-}
-	
-
-window.addEventListener('load', (event) => {
-		listeners();
-	
-});
 
 
 
